@@ -18,6 +18,10 @@
 
 	let component: HTMLElement;
 	const DefaultVariationScrollTrigger = () => {
+		const prefersReducedMotion = window.matchMedia('(preferes-reduced-motion: reduce)').matches;
+		if (prefersReducedMotion) {
+			return;
+		}
 		const t1 = gsap.timeline({
 			scrollTrigger: {
 				trigger: component,

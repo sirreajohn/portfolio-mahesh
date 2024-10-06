@@ -7,6 +7,16 @@
 	export let slice: Content.HeroSlice;
 
 	onMount(() => {
+		const prefersReducedMotion = window.matchMedia('(preferes-reduced-motion: reduce)').matches;
+		if (prefersReducedMotion) {
+			gsap.to('.name-animatio', {
+				opacity: 1
+			});
+			gsap.to('.job-title', {
+				opacity: 1
+			});
+		}
+
 		const timeline = gsap.timeline();
 		timeline.fromTo(
 			'.name-animation',
