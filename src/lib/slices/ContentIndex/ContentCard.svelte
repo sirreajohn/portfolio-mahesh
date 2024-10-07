@@ -17,9 +17,11 @@
 	export let link: LinkField;
 </script>
 
-<div class="rounded overflow-hidden shadow-lg border bg bg-slate-800/[0.35]">
+<div
+	class="col-span-1 h-full flex flex-col rounded overflow-hidden shadow-lg border bg bg-slate-800/[0.35]"
+>
 	<PrismicImage field={image} />
-	<div class="px-6 py-4">
+	<div class="px-6 py-4 flex-grow">
 		<div class="font-bold text-xl mb-2">{title}</div>
 		<p class="text-gray-700 text-base">
 			{description}

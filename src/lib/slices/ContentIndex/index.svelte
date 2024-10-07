@@ -8,6 +8,19 @@
 
 	export let slice: Content.ContentIndexSlice;
 	export let items: Content.BlogpostDocument[] | Content.ProjectDocument[];
+
+	// this order is defined in prismic
+	let contentOrder = slice.primary.contentorder.map(({ contentuid }) => contentuid);
+	items.sort((a, b) => {
+		let indexA = contentOrder.indexOf(a.uid);
+		let indexB = contentOrder.indexOf(b.uid);
+
+		// If UID is not found in uidOrder, assign Infinity for "random" order
+		indexA = indexA === -1 ? Infinity : indexA;
+		indexB = indexB === -1 ? Infinity : indexB;
+
+		return indexA - indexB;
+	});
 </script>
 
 <Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>

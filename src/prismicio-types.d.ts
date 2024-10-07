@@ -655,6 +655,21 @@ type AboutSliceVariation = AboutSliceDefault | AboutSliceBiographyWithSocials;
 export type AboutSlice = prismic.SharedSlice<'about', AboutSliceVariation>;
 
 /**
+ * Item in *ContentIndex → Default → Primary → ContentOrder*
+ */
+export interface ContentIndexSliceDefaultPrimaryContentorderItem {
+	/**
+	 * ContentUid field in *ContentIndex → Default → Primary → ContentOrder*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: content_index.default.primary.contentorder[].contentuid
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	contentuid: prismic.KeyTextField;
+}
+
+/**
  * Primary content in *ContentIndex → Default → Primary*
  */
 export interface ContentIndexSliceDefaultPrimary {
@@ -707,6 +722,16 @@ export interface ContentIndexSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	fallbackimage: prismic.ImageField<never>;
+
+	/**
+	 * ContentOrder field in *ContentIndex → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: content_index.default.primary.contentorder[]
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	contentorder: prismic.GroupField<Simplify<ContentIndexSliceDefaultPrimaryContentorderItem>>;
 }
 
 /**
@@ -1151,6 +1176,7 @@ declare module '@prismicio/client' {
 			AboutSliceDefault,
 			AboutSliceBiographyWithSocials,
 			ContentIndexSlice,
+			ContentIndexSliceDefaultPrimaryContentorderItem,
 			ContentIndexSliceDefaultPrimary,
 			ContentIndexSliceVariation,
 			ContentIndexSliceDefault,

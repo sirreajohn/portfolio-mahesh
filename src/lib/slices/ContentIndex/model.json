@@ -53,6 +53,22 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "contentorder": {
+          "type": "Group",
+          "config": {
+            "label": "ContentOrder",
+            "repeat": true,
+            "fields": {
+              "contentuid": {
+                "type": "Text",
+                "config": {
+                  "label": "ContentUid",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
         }
       },
       "items": {}
