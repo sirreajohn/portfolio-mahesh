@@ -54,6 +54,79 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "biographyWithSocials",
+      "name": "BiographyWithSocials",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "avatar": {
+          "type": "Image",
+          "config": {
+            "label": "Avatar",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "button_group": {
+          "type": "Group",
+          "config": {
+            "label": "Button Group",
+            "repeat": true,
+            "fields": {
+              "button_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Label",
+                  "placeholder": ""
+                }
+              },
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "placeholder": "",
+                  "allowTargetBlank": false,
+                  "select": null
+                }
+              },
+              "special_field": {
+                "type": "Select",
+                "config": {
+                  "label": "special_field",
+                  "placeholder": "",
+                  "options": [
+                    "None",
+                    "Github",
+                    "Linkedin"
+                  ],
+                  "default_value": "None"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
     }
   ]
 }

@@ -9,13 +9,36 @@
 	export let slice: Content.AboutSlice;
 </script>
 
-<Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	<div class="grid gap-x-8 gap-y-6 md:grid-cols-[2fr,1fr]">
-		<Heading size="lg" class="col-start-1">{slice.primary.heading}</Heading>
-		<div class="col-start-1 prose prose-invert prose-slate prose-xl">
-			<PrismicRichText field={slice.primary.description} />
+{#if slice.variation == 'default'}
+	<Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+		<div class="grid gap-x-8 gap-y-6 md:grid-cols-[2fr,1fr]">
+			<Heading size="lg" class="col-start-1">{slice.primary.heading}</Heading>
+			<div class="col-start-1 prose prose-invert prose-slate prose-xl">
+				<PrismicRichText field={slice.primary.description} />
+			</div>
+			<Button linkField={slice.primary.button_link} label={slice.primary.button_label} />
+			<Avatar
+				image={slice.primary.avatar}
+				class="row-start-1 max-w-sm md:col-start-2 md:row-end-3"
+			/>
 		</div>
-		<Button linkField={slice.primary.button_link} label={slice.primary.button_label} />
-		<Avatar image={slice.primary.avatar} class="row-start-1 max-w-sm md:col-start-2 md:row-end-3" />
-	</div>
-</Bounded>
+	</Bounded>
+{:else}
+	<Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+		<div class="grid gap-x-8 gap-y-6 md:grid-cols-[2fr,1fr]">
+			<Heading size="lg" class="col-start-1">{slice.primary.heading}</Heading>
+			<div class="col-start-1 prose prose-invert prose-slate prose-xl">
+				<PrismicRichText field={slice.primary.description} />
+			</div>
+			<div class="flex flex-row gap-5">
+				{#each slice.primary.button_group as item}
+					<Button linkField={item.button_link} label={item.button_label} />
+				{/each}
+			</div>
+			<Avatar
+				image={slice.primary.avatar}
+				class="row-start-1 max-w-sm md:col-start-2 md:row-end-3"
+			/>
+		</div>
+	</Bounded>
+{/if}

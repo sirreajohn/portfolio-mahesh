@@ -435,6 +435,42 @@ export type SettingsDocument<Lang extends string = string> = prismic.PrismicDocu
 export type AllDocumentTypes = BlogpostDocument | PageDocument | ProjectDocument | SettingsDocument;
 
 /**
+ * Item in *Biography → BiographyWithSocials → Primary → Button Group*
+ */
+export interface AboutSliceBiographyWithSocialsPrimaryButtonGroupItem {
+	/**
+	 * Button Label field in *Biography → BiographyWithSocials → Primary → Button Group*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about.biographyWithSocials.primary.button_group[].button_label
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	button_label: prismic.KeyTextField;
+
+	/**
+	 * Button Link field in *Biography → BiographyWithSocials → Primary → Button Group*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about.biographyWithSocials.primary.button_group[].button_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	button_link: prismic.LinkField;
+
+	/**
+	 * special_field field in *Biography → BiographyWithSocials → Primary → Button Group*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: None
+	 * - **API ID Path**: about.biographyWithSocials.primary.button_group[].special_field
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	special_field: prismic.SelectField<'None' | 'Github' | 'Linkedin', 'filled'>;
+}
+
+/**
  * Primary content in *Biography → Default → Primary*
  */
 export interface AboutSliceDefaultPrimary {
@@ -503,9 +539,67 @@ export type AboutSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Biography → BiographyWithSocials → Primary*
+ */
+export interface AboutSliceBiographyWithSocialsPrimary {
+	/**
+	 * Heading field in *Biography → BiographyWithSocials → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about.biographyWithSocials.primary.heading
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	heading: prismic.KeyTextField;
+
+	/**
+	 * Description field in *Biography → BiographyWithSocials → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about.biographyWithSocials.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Avatar field in *Biography → BiographyWithSocials → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about.biographyWithSocials.primary.avatar
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	avatar: prismic.ImageField<never>;
+
+	/**
+	 * Button Group field in *Biography → BiographyWithSocials → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about.biographyWithSocials.primary.button_group[]
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	button_group: prismic.GroupField<Simplify<AboutSliceBiographyWithSocialsPrimaryButtonGroupItem>>;
+}
+
+/**
+ * BiographyWithSocials variation for Biography Slice
+ *
+ * - **API ID**: `biographyWithSocials`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AboutSliceBiographyWithSocials = prismic.SharedSliceVariation<
+	'biographyWithSocials',
+	Simplify<AboutSliceBiographyWithSocialsPrimary>,
+	never
+>;
+
+/**
  * Slice variation for *Biography*
  */
-type AboutSliceVariation = AboutSliceDefault;
+type AboutSliceVariation = AboutSliceDefault | AboutSliceBiographyWithSocials;
 
 /**
  * Biography Shared Slice
@@ -1007,8 +1101,11 @@ declare module '@prismicio/client' {
 			AllDocumentTypes,
 			AboutSlice,
 			AboutSliceDefaultPrimary,
+			AboutSliceBiographyWithSocialsPrimaryButtonGroupItem,
+			AboutSliceBiographyWithSocialsPrimary,
 			AboutSliceVariation,
 			AboutSliceDefault,
+			AboutSliceBiographyWithSocials,
 			ContentIndexSlice,
 			ContentIndexSliceDefaultPrimary,
 			ContentIndexSliceVariation,

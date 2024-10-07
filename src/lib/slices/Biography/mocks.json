@@ -32,7 +32,6 @@
 				}
 			},
 			"avatar": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a",
@@ -50,9 +49,141 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			}
 		},
 		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "biographyWithSocials",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "speak",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Eiusmod aliquip labore incididunt ea aliquip. Irure qui labore ea ea sit qui commodo non enim Lorem dolore. Culpa nostrud elit nulla nulla aliquip sint."
+						}
+					}
+				]
+			},
+			"avatar": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+					"width": 5243,
+					"height": 3495
+				},
+				"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+				"width": 5243,
+				"height": 3495,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"button_group": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "college",
+									"type": "Text"
+								}
+							],
+							[
+								"button_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
+									}
+								}
+							],
+							[
+								"special_field",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "None",
+									"type": "Select"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_label",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Linkedin"
+								}
+							],
+							[
+								"special_field",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "None",
+									"type": "Select"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"button_label",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Github"
+								}
+							],
+							[
+								"special_field",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "None",
+									"type": "Select"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
 	}
 ]
