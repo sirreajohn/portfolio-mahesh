@@ -36,7 +36,7 @@
 				image={post.data.hoverimage || fallbackItemImage}
 				viewmoretext={viewMoreText}
 				tags={post.tags}
-				{post}
+				link={post.data.link}
 			/>
 		</div>
 	{/each}

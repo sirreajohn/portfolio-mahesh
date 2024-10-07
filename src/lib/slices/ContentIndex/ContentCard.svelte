@@ -1,12 +1,20 @@
 <script lang="ts">
-	import { type ImageField, type KeyTextField, type Content } from '@prismicio/client';
+	import {
+		type ImageField,
+		type KeyTextField,
+		type Content,
+		type LinkField
+	} from '@prismicio/client';
 	import { PrismicImage, PrismicLink } from '@prismicio/svelte';
+	import Button from '$lib/components/Button.svelte';
+	import IconArrow from '~icons/material-symbols/arrows-more-up-rounded';
+
 	export let title: KeyTextField = 'test title';
 	export let description: KeyTextField = 'lorem epsum';
 	export let image: ImageField;
 	export let viewmoretext;
 	export let tags;
-	export let post: Content.BlogpostDocument | Content.ProjectDocument;
+	export let link: LinkField;
 </script>
 
 <div class="rounded overflow-hidden shadow-lg border bg bg-slate-800/[0.35]">
@@ -26,7 +34,10 @@
 			>
 		{/each}
 	</div>
-	<div class="inline-block text-right w-full p-5">
-		<PrismicLink document={post}>{viewmoretext}</PrismicLink>
+	<div class="inline-block w-full p-5">
+		<PrismicLink field={link} class="flex flex-row justify-end">
+			{viewmoretext}
+			<IconArrow />
+		</PrismicLink>
 	</div>
 </div>

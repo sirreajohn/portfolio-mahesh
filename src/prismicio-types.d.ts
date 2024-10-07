@@ -55,6 +55,17 @@ interface BlogpostDocumentData {
 	shortdescription: prismic.KeyTextField;
 
 	/**
+	 * Link field in *BlogPost*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blogpost.link
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField;
+
+	/**
 	 * Slice Zone field in *BlogPost*
 	 *
 	 * - **Field Type**: Slice Zone
@@ -242,6 +253,17 @@ interface ProjectDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	shortdescription: prismic.KeyTextField;
+
+	/**
+	 * link field in *project*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: project.link
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField;
 
 	/**
 	 * Slice Zone field in *project*
