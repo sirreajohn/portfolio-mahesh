@@ -28,13 +28,16 @@
 		</p>
 	</div>
 	<div class="px-6 pt-2 pb-2">
-		<div class="font-bold text-xl mb-2">Tech Used:</div>
-		{#each tags as tag}
-			<span
-				class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-				>{tag}</span
-			>
-		{/each}
+		{#if tags.length != 0}
+			<div class="font-bold text-xl mb-2">Tech Used:</div>
+
+			{#each tags as tag}
+				<span
+					class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+					>{tag}</span
+				>
+			{/each}
+		{/if}
 	</div>
 	<div class="inline-block w-full p-5">
 		<PrismicLink field={link} class="flex flex-row justify-end">
