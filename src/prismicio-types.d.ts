@@ -44,6 +44,17 @@ interface BlogpostDocumentData {
 	hoverimage: prismic.ImageField<never>;
 
 	/**
+	 * ShortDescription field in *BlogPost*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blogpost.shortdescription
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	shortdescription: prismic.KeyTextField;
+
+	/**
 	 * Slice Zone field in *BlogPost*
 	 *
 	 * - **Field Type**: Slice Zone
@@ -220,6 +231,17 @@ interface ProjectDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	hoverimage: prismic.ImageField<never>;
+
+	/**
+	 * ShortDescription field in *project*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: project.shortdescription
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	shortdescription: prismic.KeyTextField;
 
 	/**
 	 * Slice Zone field in *project*

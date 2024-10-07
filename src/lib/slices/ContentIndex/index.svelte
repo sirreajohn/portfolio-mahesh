@@ -4,6 +4,7 @@
 	import { type Content, isFilled } from '@prismicio/client';
 	import { PrismicRichText } from '@prismicio/svelte';
 	import ContentList from './ContentList.svelte';
+	import ContentListCards from './ContentListCards.svelte';
 
 	export let slice: Content.ContentIndexSlice;
 	export let items: Content.BlogpostDocument[] | Content.ProjectDocument[];
@@ -19,7 +20,15 @@
 		</div>
 	{/if}
 
-	<ContentList
+	<!-- variation - 1 -->
+	<!-- <ContentList
+		fallbackItemImage={slice.primary.fallbackimage}
+		{items}
+		viewMoreText={slice.primary.viewmoretext}
+	/> -->
+
+	<!-- variation - 2 -->
+	<ContentListCards
 		fallbackItemImage={slice.primary.fallbackimage}
 		{items}
 		viewMoreText={slice.primary.viewmoretext}
