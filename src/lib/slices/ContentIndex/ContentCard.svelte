@@ -6,7 +6,6 @@
 		type LinkField
 	} from '@prismicio/client';
 	import { PrismicImage, PrismicLink } from '@prismicio/svelte';
-	import Button from '$lib/components/Button.svelte';
 	import IconArrow from '~icons/material-symbols/arrows-more-up-rounded';
 
 	export let title: KeyTextField = 'test title';
@@ -22,8 +21,8 @@
 >
 	<PrismicImage field={image} />
 	<div class="px-6 py-4 flex-grow">
-		<div class="font-bold text-xl mb-2">{title}</div>
-		<p class="text-gray-700 text-base">
+		<div class="font-bold text-xl mb-2 border-b-2 pb-2">{title}</div>
+		<p class="prose prose-invert prose-slate prose-sm">
 			{description}
 		</p>
 	</div>
