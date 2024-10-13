@@ -1,13 +1,6 @@
 <script lang="ts">
-	import Bounded from '$lib/components/Bounded.svelte';
-	import { onMount } from 'svelte';
-	import {
-		type Content,
-		type ImageField,
-		type KeyTextField,
-		isFilled,
-		asImageSrc
-	} from '@prismicio/client';
+	import { afterUpdate, onMount } from 'svelte';
+	import { type Content, type ImageField, type KeyTextField } from '@prismicio/client';
 	import ContentCard from './ContentCard.svelte';
 	import { gsap } from 'gsap';
 
@@ -15,7 +8,17 @@
 	export let fallbackItemImage: ImageField;
 	export let viewMoreText: KeyTextField = 'Read More';
 
-	onMount(() => {
+	// onMount(() => {
+	// 	gsap.from('.fade-card', {
+	// 		opacity: 0,
+	// 		y: 150,
+	// 		duration: 2,
+	// 		stagger: 0.2
+	// 	});
+	// });
+
+	// force update this animation when data is "switched" between projects and blogs
+	afterUpdate(() => {
 		gsap.from('.fade-card', {
 			opacity: 0,
 			y: 150,
