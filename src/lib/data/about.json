@@ -1,0 +1,19 @@
+{
+	"metrics": [
+		{ "label": "PROJECTS_SHIPPED", "value": "30+" },
+		{ "label": "CLIENTS_SERVED", "value": "15+" },
+		{ "label": "YEARS_ACTIVE", "value": "4+" },
+		{ "label": "LINES_WRITTEN", "value": "200K+" }
+	],
+	"timeline": [
+		{ "year": "2022", "event": "Started freelancing — web & mobile" },
+		{ "year": "2023", "event": "Led architecture for SaaS platforms" },
+		{ "year": "2024", "event": "Deep into systems programming — Go, Rust" },
+		{ "year": "2025", "event": "Building infra-level tooling & open source" }
+	],
+	"bio": [
+		"I'm a full-stack engineer who treats code like infrastructure — it should be reliable, observable, and built to scale. I work across the entire stack, from pixel-perfect interfaces to distributed backend systems.",
+		"My approach is systems-first: understand the problem domain deeply, then architect solutions that are maintainable and performant. I don't build MVPs — I build foundations.",
+		"Currently focused on distributed systems, developer tooling, and real-time applications. When I'm not shipping code, I'm contributing to open source or writing about software architecture."
+	]
+}

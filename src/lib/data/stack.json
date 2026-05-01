@@ -1,0 +1,48 @@
+{
+	"categories": [
+		{
+			"label": "FRONTEND",
+			"prefix": "FE",
+			"items": [
+				{ "name": "SVELTE / SVELTEKIT", "level": 95 },
+				{ "name": "REACT / NEXT.JS", "level": 90 },
+				{ "name": "TYPESCRIPT", "level": 92 },
+				{ "name": "TAILWIND CSS", "level": 95 },
+				{ "name": "THREE.JS / WEBGL", "level": 70 }
+			]
+		},
+		{
+			"label": "BACKEND",
+			"prefix": "BE",
+			"items": [
+				{ "name": "NODE.JS", "level": 92 },
+				{ "name": "GO", "level": 80 },
+				{ "name": "RUST", "level": 65 },
+				{ "name": "PYTHON", "level": 85 },
+				{ "name": "GRPC / REST", "level": 90 }
+			]
+		},
+		{
+			"label": "INFRASTRUCTURE",
+			"prefix": "IF",
+			"items": [
+				{ "name": "DOCKER / K8S", "level": 82 },
+				{ "name": "AWS / GCP", "level": 78 },
+				{ "name": "POSTGRESQL", "level": 88 },
+				{ "name": "REDIS / KAFKA", "level": 75 },
+				{ "name": "LINUX / NGINX", "level": 85 }
+			]
+		},
+		{
+			"label": "TOOLING",
+			"prefix": "TL",
+			"items": [
+				{ "name": "GIT / GITHUB", "level": 95 },
+				{ "name": "CI/CD PIPELINES", "level": 82 },
+				{ "name": "NEOVIM / TMUX", "level": 88 },
+				{ "name": "FIGMA", "level": 70 },
+				{ "name": "MONITORING / LOGS", "level": 78 }
+			]
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"contactChannels": [
+		{ "label": "EMAIL", "value": "hello@mahesh.dev", "href": "mailto:hello@mahesh.dev", "prefix": "MAIL" },
+		{ "label": "GITHUB", "value": "github.com/mahesh", "href": "https://github.com/mahesh", "prefix": "GIT" },
+		{ "label": "LINKEDIN", "value": "linkedin.com/in/mahesh", "href": "https://linkedin.com/in/mahesh", "prefix": "LN" },
+		{ "label": "TWITTER", "value": "@mahesh_dev", "href": "https://twitter.com/mahesh_dev", "prefix": "TW" }
+	],
+	"availability": {
+		"status": "CURRENTLY AVAILABLE",
+		"responseTime": "~24h",
+		"preferredCommunication": "email",
+		"details": "Available for freelance, contract, and consulting engagements."
+	},
+	"systemInfo": {
+		"timezone": "UTC+5:30 (IST)",
+		"location": "BANGALORE, INDIA",
+		"protocol": "ASYNC"
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"techIcons": [
+		{ "name": "JS", "label": "JavaScript" },
+		{ "name": "TS", "label": "TypeScript" },
+		{ "name": "RE", "label": "React" },
+		{ "name": "SV", "label": "Svelte" },
+		{ "name": "NO", "label": "Node.js" },
+		{ "name": "PY", "label": "Python" },
+		{ "name": "GO", "label": "Golang" },
+		{ "name": "RS", "label": "Rust" }
+	],
+	"stackTags": [
+		"SVELTE",
+		"REACT",
+		"NEXT.JS",
+		"NODE.JS",
+		"TYPESCRIPT",
+		"PYTHON",
+		"GO",
+		"RUST",
+		"POSTGRESQL",
+		"REDIS",
+		"DOCKER",
+		"AWS",
+		"GCP",
+		"LINUX",
+		"GIT"
+	]
+}

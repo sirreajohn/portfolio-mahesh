@@ -1,0 +1,40 @@
+{
+	"projects": [
+		{
+			"id": "PRJ_001",
+			"name": "LATTICE",
+			"type": "SaaS PLATFORM",
+			"desc": "Visual collaboration workspace — infinite canvas with real-time sync, rich text editing, and multi-modal content management.",
+			"stack": ["SVELTEKIT", "SUPABASE", "POSTGRESQL", "WEBRTC"],
+			"status": "ACTIVE",
+			"year": "2024"
+		},
+		{
+			"id": "PRJ_002",
+			"name": "NEXUS_CLI",
+			"type": "DEVELOPER TOOL",
+			"desc": "High-performance CLI toolkit for scaffolding, deployment, and infrastructure management across cloud providers.",
+			"stack": ["GO", "COBRA", "DOCKER", "AWS"],
+			"status": "SHIPPED",
+			"year": "2024"
+		},
+		{
+			"id": "PRJ_003",
+			"name": "DATASTREAM",
+			"type": "REAL-TIME ENGINE",
+			"desc": "Event-driven data pipeline with sub-millisecond latency for processing high-throughput financial data streams.",
+			"stack": ["RUST", "KAFKA", "REDIS", "GRPC"],
+			"status": "SHIPPED",
+			"year": "2023"
+		},
+		{
+			"id": "PRJ_004",
+			"name": "PHANTOM_UI",
+			"type": "DESIGN SYSTEM",
+			"desc": "Component library and design tokens framework built for dark-mode-first applications with accessibility compliance.",
+			"stack": ["REACT", "TYPESCRIPT", "STORYBOOK", "CSS"],
+			"status": "OPEN_SOURCE",
+			"year": "2023"
+		}
+	]
+}
