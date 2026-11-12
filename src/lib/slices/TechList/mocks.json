@@ -1,0 +1,75 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "star",
+				"type": "Text"
+			},
+			"items": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"tech_name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "point",
+									"type": "Text"
+								}
+							],
+							[
+								"tech_color",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "#b7e5c0",
+									"type": "Color"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "techListWithRichText",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "pale",
+				"type": "Text"
+			},
+			"items": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"techlist",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "desk",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]

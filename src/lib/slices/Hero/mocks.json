@@ -1,0 +1,24 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"first_name": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Mahesh"
+			},
+			"last_name": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Patapalli"
+			},
+			"tagline": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "ML Engineer / Data Scientist"
+			}
+		},
+		"items": []
+	}
+]
