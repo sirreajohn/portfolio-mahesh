@@ -3,9 +3,10 @@
 
   let { size = 16, maxWidth = "w-full max-w-xl xl:max-w-2xl" } = $props();
 
-  let grid = $state(Array(size * size).fill(false));
+  let grid = $state([]);
   let isDrawing = $state(false);
   let drawMode = $state(true);
+  let previousSize = $state(0);
 
   // Compact 16-bit presets
   const PRESETS = {
@@ -13,8 +14,6 @@
     heart:   [0x0000, 0x0000, 0x0e70, 0x1ff8, 0x3ffc, 0x3ffc, 0x3ffc, 0x1ff8, 0x0ff0, 0x07e0, 0x03c0, 0x0180, 0x0000, 0x0000, 0x0000, 0x0000],
     ghost:   [0x0000, 0x03c0, 0x0ff0, 0x1ff8, 0x3bdc, 0x3bdc, 0x3ffc, 0x3ffc, 0x3ffc, 0x3ffc, 0x3ffc, 0x36dc, 0x2492, 0x0000, 0x0000, 0x0000],
   };
-
-  let previousSize = size;
   $effect(() => {
     if (size !== previousSize) {
       previousSize = size;

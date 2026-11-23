@@ -9,7 +9,10 @@
     socials = [],
   } = $props();
 
-  let nameEl, titleEl, buttonsEl, socialsEl;
+  let nameEl = $state();
+  let titleEl = $state();
+  let buttonsEl = $state();
+  let socialsEl = $state();
 
   const displayName = $derived(name.endsWith('_') ? name.slice(0, -1) : name);
   const hasUnderscore = $derived(name.endsWith('_'));

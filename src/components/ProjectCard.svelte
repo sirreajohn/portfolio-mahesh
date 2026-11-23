@@ -15,8 +15,8 @@
     index = 0,
   } = $props();
 
-  const number = String(index + 1).padStart(2, "0");
-  let cardEl;
+  const number = $derived(String(index + 1).padStart(2, "0"));
+  let cardEl = $state();
 
   onMount(() => {
     gsap.fromTo(

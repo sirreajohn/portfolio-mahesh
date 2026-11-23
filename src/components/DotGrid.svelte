@@ -21,6 +21,7 @@
   bind:this={container}
   onmousemove={handleMouseMove}
   onmouseleave={handleMouseLeave}
+  role="presentation"
   class="absolute inset-0 w-full h-full overflow-hidden pointer-events-auto"
 >
   <!-- base dot grid covering full area, fading in bottom half -->
